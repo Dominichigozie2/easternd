@@ -5,10 +5,8 @@ btnMenu.addEventListener("click", () => {
     // Toggle the 'active' class on smallScreenMenu
     if (smallScreenMenu.classList.contains("active")) {
         smallScreenMenu.classList.remove("active");
-        btnMenu.classList.remove("fa-times");
     } else {
         smallScreenMenu.classList.add("active");
-        btnMenu.classList.add("fa-times");
     }
 });
 
@@ -33,6 +31,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+// the video popup script
+
+// JavaScript
+document.addEventListener("DOMContentLoaded", function() {
+    var playButton = document.querySelector(".play");
+    var modal = document.getElementById("video-modal");
+    var closeButton = modal.querySelector(".close");
+    var video = modal.querySelector("video");
+
+    playButton.addEventListener("click", function() {
+        modal.style.display = "block";
+    });
+
+    closeButton.addEventListener("click", function() {
+        modal.style.display = "none";
+        video.pause();
+    });
+
+    window.addEventListener("click", function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            video.pause();
+        }
+    });
+});
 
 
 

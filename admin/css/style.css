@@ -36,8 +36,18 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    box-shadow: 1px 3px 10px #0003;
+    /* box-shadow: 1px 3px 10px #0003; */
+    position: sticky;
+    top: 0;
 
+    .fa-times{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 28px;
+        color: var(--dark-color);
+        display: none;
+    }
 
     .logo{
         width: 150px;
@@ -112,6 +122,9 @@ body {
      }
     }
  }
+ .nav.active{
+    left: 0 ;
+ }
 
 
 
@@ -153,10 +166,12 @@ ul li.open > ul {
     padding: 2rem 1rem;
     background: #fff;
 
+
+
     nav{
         display: flex;
         justify-content: space-between;
-        align-items: center;    
+        align-items: center;
 
         a{
             color: var(--secondary-color);
@@ -165,41 +180,7 @@ ul li.open > ul {
             border: 1px solid var(--dark-color);
             border-radius: 50%;
         }
-        form{
-            width: min(30rem, 100%);
-            background: var(--lit-color);
-            border: 1px solid #0004;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            border-radius: 5px;
-
-            input{
-                width: 100%;
-                padding: 1rem;
-                font-size: 14px;
-                border: none;
-                outline: none;
-                background: transparent;
-            }
-            button{
-                padding: 1rem;
-                font-size: 14px;
-                border: none;
-                outline: none;
-                background: var(--secondary-color);
-                color: #fff;
-                transition: all 500ms ease;
-                border-radius: 5px;
-                cursor: pointer;
-
-                &:hover{
-                    background: var(--lit-color);
-                    color: var(--dark-color);
-                }
-            }
-        }
-
+      
         .admin-details{
             display: flex;
             align-items: center;
@@ -284,4 +265,283 @@ ul li.open > ul {
         }
     }
 
+
+    form{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+
+        h3{
+            grid-column: span 2;
+            padding: 2rem 0;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: var(--dark-color)
+        }
+        .input-field{
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            gap: 1rem;
+            border: 1px solid #0002;
+
+            label{
+                font-size: 14px;
+                text-transform: capitalize;
+                color: var(--lit-color);
+                background: var(--primary-color);
+                width: max-content;
+            }
+            input{
+                width: 100%;
+                color: #0006;
+                background: transparent;
+                padding: 1rem;
+                border: none;
+                outline: none;
+                background: transparent;
+                color: var(--dark-color);
+                font-size: 14px;
+
+                &::placeholder{
+                    text-transform: capitalize;
+                    font-size: 12px;
+                    color: #0004;
+                }
+            }
+
+            textarea{
+                min-height: 10rem;
+                resize: vertical;
+                border: none;
+                outline: none;
+                color: var(--dark-color);
+                font-size: 14px;
+                background: transparent;
+            }
+        }
+        .textarea{
+            grid-column: span 2;
+        }
+
+        button{
+            background: var(--dark-color);
+            border: none;
+            outline: none;
+            color: #fff;
+            padding: 1rem;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition: all 500ms ease;
+
+            &:hover{
+                background: #cfc8ff;
+                color: var(--dark-color);
+            }
+        }
+    }
+
+    
+    table {
+        width: 100%;
+        padding: 1rem;
+        border-collapse: collapse;
+
+        tr {
+            cursor: pointer;
+            transition: all 200ms ease;
+        }
+
+        tr:nth-of-type(2n) {
+            background: rgba(212, 233, 251, 0.44);
+        }
+
+        tr:hover {
+            background: rgba(212, 233, 251, 0.939);
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            background: var(--primary-color);
+            text-transform: capitalize;
+            color: var(--color-lit-100);
+            font-size: 14px;
+        }
+
+        td {
+            padding: 1rem;
+        }
+        .action{
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+
+            a{
+                padding: 1rem;
+                background: var(--secondary-color);
+                color: var(--lit-color);
+            }
+        }
+    }
   }
+
+
+
+ 
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+        width: min(40rem,100%);
+
+        .input-field{
+            width: min(40rem,100%);
+            /* padding: .5rem 0; */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--primary-color);
+
+            i{
+                padding: 1rem 1.5rem;
+                font-size: 18px;
+                background: var(--primary-color);
+                /* height: 70px; */
+            }
+            input{
+                padding: 1rem;
+                font-size: 14px;
+                width: 100%;
+                border: none;
+                outline: none;
+                background: transparent;
+
+                &::placeholder{
+                    font-size: 12px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        button{
+            padding: 1rem;
+            font-size: 14px;
+            cursor: pointer;
+            background: var(--dark-color);
+            color: var(--primary-color);
+            border: none;
+            outline: none;
+            transition: all 500ms ease;
+
+            &:hover{
+                background: var(--primary-color);
+                color: var(--dark-color);
+            }
+        }
+    }
+}
+
+
+@media(width < 990px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .nav{
+        position: fixed;
+        width: 25%;
+        top: 0;
+        bottom: 0;
+        left: -100rem;
+        transition: all 500ms ease;
+
+        .fa-times{
+            display: flex;
+        }
+    }
+}
+
+@media(width < 770px){
+
+    .nav{
+        width: 40%;
+    }
+   main{
+    .display-section{
+        .row{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+   }
+}
+
+@media(width < 690px) {
+    th {
+          display: none;
+
+  }
+
+  td {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.78rem 1rem;
+  }
+
+  td:first-child {
+      padding-top: 2rem;
+  }
+
+  td:last-child {
+      padding-bottom: 2rem;
+  }
+
+  td::before {
+      content: attr(data-cell)": ";
+      font-weight: 700;
+      text-transform: capitalize;
+  }
+}
+
+@media(width < 570px){
+    .nav{
+        width: 80%;
+    
+        ul{
+            margin-top: 10%;
+            overflow-y: scroll;
+        }
+    }
+
+    main{
+    .display-section{
+        .row{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        }
+    form{
+        grid-template-columns: 1fr;
+
+        h3{
+            grid-column: span 1;
+            font-size: 18px;
+            }
+            .textarea{
+            grid-column: span 1;
+        }
+    }
+
+    }
+}
+

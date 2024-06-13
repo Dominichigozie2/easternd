@@ -7,4 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
   
+
+const navBar= document.querySelector(".fa-bars");
+
+navBar.addEventListener("click", ()=>{
+    const navMenu = document.querySelector(".nav");
+    const navClose = document.querySelector(".fa-times");
+
+    navMenu.classList.add("active");
+    navClose.addEventListener("click", ()=>{
+      navMenu.classList.remove("active");
+    });
+});

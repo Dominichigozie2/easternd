@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Admin</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav">
+                <a href="#"><i class="fa-solid fa-times"></i></a>
+                <div class="logo">
+                    <img src="../img/logo.png" alt>
+                </div>
+                <ul>
+                    <li class="active list-item">
+                        <a href="./index1.html"><i class="fa-solid fa-border-all"></i> Dashboard</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="./profile.html"><i class="fa-solid fa-pen-to-square"></i> Login details</a>
+                    </li>
+                    <li class="list-item">
+                        <a><i class="fa-solid fa-address-card"></i>About</a>
+                        <ul>
+                            <li><a href="./about.html"><i class="fa-solid fa-pen-to-square"></i> Update New</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-item">
+                        <a><i class="fa-solid fa-bottle-water"></i>premium Brand</a>
+                        <ul>
+                            <li><a href="./brandPadd.html"><i class="fa-solid fa-file-circle-plus"></i> Add New</a></li>
+                            <li><a href="./brandplist.html"><i class="fa-solid fa-pen-to-square"></i> premium Brand</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="list-item">
+                        <a><i class="fa-solid fa-bottle-water"></i>Calidon's Brand</a>
+                        <ul>
+                            <li><a href="./brandcadd.html"><i class="fa-solid fa-file-circle-plus"></i> Add New</a></li>
+                            <li><a href="./brandclist.html"><i class="fa-solid fa-pen-to-square"></i>Calidon's Brand</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-item">
+                        <a><i class="fa-solid fa-calendar-check"></i>Events</a>
+                        <ul>
+                            <li><a href="./eventadd.html"><i
+                                        class="fa-solid fa-file-circle-plus"></i>
+                                    Add New</a></li>
+                            <li><a href="./events.html"><i
+                                        class="fa-solid fa-pen-to-square"></i>
+                                    events</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+            </div>
+            <main class="main">
+                <nav>
+                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+
+
+                    <div class="admin-details">
+                        <div class="admin-image">
+                            <img src="../img/author-1.jpg" alt>
+                        </div>
+                        <div class="admin-info">
+                            <h3>Dominic</h3>
+                            <p>Admin</p>
+                        </div>
+                    </div>
+                </nav>
+                <br>
+                <br>
+                <br>    
+                <div class="display-section">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Premium brands <i class="fa-solid fa-award"></i></h2>
+                            <h4>10</h4>
+                            <a href="./brandplist.html">View</a>
+                        </div>
+                        <div class="col">
+                            <h2>Calidon's brands <i class="fa-solid fa-copyright"></i></h2>
+                            <h4>8</h4>
+                            <a href="./brandclist.html">View</a>
+                        </div>
+                        <div class="col">
+                            <h2>Events <i class="fa-solid fa-calendar-days"></i></h2>
+                            <h4>2</h4>
+                            <a href="./events.html">View</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

@@ -24,7 +24,7 @@
                                 class="fa-solid fa-border-all"></i>
                             Dashboard</a>
                     </li>
-                    <li class="list-item active">
+                    <li class="list-item">
                         <a><i
                                 class="fa-solid fa-address-card"></i>About</a>
                         <ul>
@@ -43,10 +43,12 @@
                                     Add New</a></li>
                             <li><a href="./brandplist.html"><i
                                         class="fa-solid fa-pen-to-square"></i>
-                                    Premium Brands</a></li>
+                                    premium
+                                    Brand</a></li>
                         </ul>
                     </li>
-                    <li class="list-item">
+
+                    <li class="list-item active">
                         <a><i
                                 class="fa-solid fa-bottle-water"></i>Calidon's
                             Brand</a>
@@ -56,7 +58,8 @@
                                     Add New</a></li>
                             <li><a href="./brandclist.html"><i
                                         class="fa-solid fa-pen-to-square"></i>
-                                    Calidon's</a></li>
+                                    Calidon's
+                                    Brand</a></li>
                         </ul>
                     </li>
                     <li class="list-item">
@@ -70,7 +73,6 @@
                                     events</a></li>
                         </ul>
                     </li>
-
                 </ul>
                 <li><a href="#"><i
                             class="fa-solid fa-right-from-bracket"></i>
@@ -94,47 +96,32 @@
                 <br>
                 <br>
                 <br>
-            
-                <form action="#">
-                    <h3>For three images in the about description </h3>
-
-                    <div class="input-field">
-                        <label for="input">enter the first image</label>
-                        <input type="file" placeholder="Enter for the first Image" name="firstdesimage" id="">
-                    </div>
-                    <div class="input-field">
-                        <label for="input">enter the second image</label>
-                        <input type="file" placeholder="Enter for the second Image" name="seconddesimage" id="">
-                    </div>
-                    <div class="input-field">
-                        <label for="input">enter the third image</label>
-                        <input type="file" placeholder="Enter for the third Image" name="thirddesimage" id="">
-                    </div>
-
-                    <h3>for the five images in the about</h3>
-                    <div class="input-field">
-                        <label for="input">enter the first image</label>
-                        <input type="file" placeholder="Enter for the first Image" name="firstimage" id="">
-                    </div>
-                    <div class="input-field">
-                        <label for="input">enter the second image</label>
-                        <input type="file" placeholder="Enter for the second Image" name="secondimage" id="">
-                    </div>
-                    <div class="input-field">
-                        <label for="input">enter the third image</label>
-                        <input type="file" placeholder="Enter for the third Image" name="thirdimage" id="">
-                    </div>
-                    <div class="input-field">
-                        <label for="input">enter the forth image</label>
-                        <input type="file" placeholder="Enter for the forth Image" name="forthimage" id="">
-                    </div>
-                    <div class="input-field">
-                        <label for="input">enter the last image</label>
-                        <input type="file" placeholder="Enter for the last Image" name="Firstimage" id="">
-                    </div>
-
-                    <button>Save Changes</button>
-                </form>
+                <h3>List of the Events</h3>
+                <br>
+                <br>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Brand Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td
+                                data-cell="id">1</td>
+                            <td
+                                data-cell="Name">Palmy Cola</td>
+                            <td class="action"
+                                data-cell="type">
+                                <a href="./eventedit.html">Edit</a>
+                                <a href="./delete.html"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </main>
         </div>
         <script src="./js/script.js"></script>

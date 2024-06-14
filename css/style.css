@@ -1879,7 +1879,7 @@ h6 {
     }
 
     nav {
-        height: 65px;
+        height: 75px;
         overflow: hidden;
         transition: all 500ms ease;
 
@@ -2156,7 +2156,7 @@ h6 {
     }
 
     nav {
-        height: 30px;
+        height: 40px;
         overflow: hidden;
 
         .menu-btn {

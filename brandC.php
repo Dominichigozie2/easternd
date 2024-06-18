@@ -1,0 +1,171 @@
+<?php
+include_once 'include/config.php';
+
+?>
+
+<?php
+include 'loader.php';
+?>
+        <div class="firstnav">
+            <div class="container firstnav-container">
+                <ul class="contact-nav">
+                    <li><a href="#"><i class="fa-solid fa-phone"></i>
+                            <span>+2347066586037</span></a></li>
+                    <li><a href="#"><i
+                                class="fa-solid fa-envelope"></i>
+                            <span>sales@easterndistilleries.com</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-clock"></i>
+                            <span>24/7 customer
+                                support</span></a></li>
+                </ul>
+                <div class="media">
+                    <a href="#"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i
+                            class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container nav-container">
+                <div class="logo">
+                    <img src="./img/logo.png" alt>
+                </div>
+                <ul class="nav-list">
+                    <li class="list-items"><a
+                            href="./index.php">Home</a></li>
+                    <li class="list-items"><a href="./about.php">about
+                            us</a></li>
+                            <li class="list-items dropdown">
+                                <a>Brands <i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./brandP.php">Premium</a></li>
+                                    <li class="active"><a href="./brandC.php">Brand 2</a></li>
+                                    <!-- Add more brands as needed -->
+                                </ul>
+                            </li>
+                    <li class="list-items"><a href="https://krisoralgroup.com/">corporate
+                            social responsibilities</a></li>
+                    <li class="list-items"><a
+                            href="./contact.php">contact</a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        <div class="page-hero">
+            <div class="page-container container">
+                <h3>Calidon Brands</h3>
+                <div class="click-back-menu">
+                    <li><a href="./index.php">Home</a></li>
+                    <li class="thestyle"></li>
+                    <li>Brands</li>
+                </div>
+            </div>
+            <div class="video-thumbnail">
+                <img src="./img/about-baner-2.jpg" alt>
+                <div class="play"><i
+                        class="fa-solid fa-play"></i></div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="video-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <video controls muted>
+                    <source src="./img/herovideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="grid-system">
+        <?php
+                $sql = "SELECT * FROM `calidonb_tb`";
+                $result = mysqli_query($conn, $sql);
+
+
+                if (mysqli_num_rows($result)) {
+                    ?>
+            <div class="grid-container container">
+            <?php
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            ?>
+                <div class="grid-box">
+                    <div class="grid-box-image">
+                        <img src="./admin/upload/<?php echo $row['cbfimage']; ?>" alt="">
+                    </div>
+                    <div class="grid-box-content">
+                        <h6>Calidon's Brands</h6>
+                        <h5><?php
+                            echo $row['cbname'];
+                        ?></h5>
+                        <a href="./Branddisplay.php?id=<?php echo $row['cbid']; ?>">View Details</a>
+                    </div>
+                </div>
+                <?php
+                        }
+                ?>
+            </div>
+            <?php
+                }
+            ?>
+        </div>
+
+        
+        <div class="footer">
+            <div class="container footer-container">
+                <div class="footer-logo">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="footer-ul">
+                    <ul>
+                        <h5>Useful</h5>
+                        <li><a href="./index.php">home</a></li>
+                        <li><a href="./about.php">about</a></li>
+                        <li><a href="./brandP.php">premium brands</a></li>
+                    </ul>
+                    <ul>
+                        <h5></h5>
+                        <li><a href="./brandC.php">calidon brands</a></li>
+                        <li><a href="krisoral.com">cooperate social responsibilities</a></li>
+                        <li><a href="./contact.php">contact</a></li>
+                    </ul>
+                    <ul>
+                        <h5>our info</h5>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i>
+                            <span>+2347066586037</span></a></li>
+                    <li><a href="#"><i
+                                class="fa-solid fa-envelope"></i>
+                            <span>sales@easterndistilleries.com</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-clock"></i>
+                            <span>24/7 customer
+                                support</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-media">
+                    <a href="#"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i
+                        class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <h6>eastern distillaries and food industries limited 2024, all right reserved.</h6>
+        </div>
+        <script src="./js/script.js"></script>
+    </body>
+    </html>

@@ -15,11 +15,24 @@
     --bg-cloth: #0e073cea;
 }
 
+
+
 body {
     font-size: 12px;
     /* background: black; */
+    scrollbar-width: thin; /* Set the width of the scrollbar */
+    scrollbar-color: #666 transparent; /* Color of the scrollbar thumb and track */
 }
 
+/* WebKit */
+::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners of the scrollbar thumb */
+}
 .container {
     width: 90%;
     margin-inline: auto;
@@ -314,7 +327,7 @@ h6 {
 
 
 .about {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     background-image: url(../img/error-bg.png);
@@ -454,7 +467,7 @@ h6 {
 /* about section ends. Now to displaying the premium products  */
 
 .premium {
-    padding: 10rem 0;
+    padding: 5rem 0;
     min-height: 40vh;
     background: var(--secondary-color);
     background-image: url(../img/bg.png);
@@ -766,6 +779,7 @@ h6 {
 .events {
     display: flex;
     align-items: center;
+    background: url(../img/black-concrete-textured.png);
     border-bottom: 10px solid var(--primary-color);
     padding: 1rem 0;
     min-height: 70svh;
@@ -804,6 +818,7 @@ h6 {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
+                background: var(--lit-color);
                 box-shadow: 1px 2px 10px #0002;
 
                 .event-thumb {
@@ -1039,6 +1054,7 @@ h6 {
         display: flex;
         flex-direction: column;
         border-radius: 10px;
+        width: 20rem;
         overflow: hidden;
         border: 5px solid var(--lit-color);
 
@@ -1418,19 +1434,19 @@ h6 {
             }
 
             .grid-box-content {
-                padding: 1rem;
+                padding: 1rem 2rem;
                 position: absolute;
                 margin-inline: auto;
                 border-radius: 5px;
                 left: 3%;
-                width: 87%;
-                height: 20%;
-                background: var(--secondary-color);
+                width: 94%;
+                height: 30%;
+                background: #0e073caf;
                 bottom: 1rem;
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-                transition: all 500ms ease;
+                transition: all 600ms ease;
                 cursor: pointer;
 
                 h6 {
@@ -1475,7 +1491,7 @@ h6 {
 
             &:hover {
                 .grid-box-content {
-                    height: 30%;
+                    height: 40%;
 
                     a {
                         animation: opacity 0.6s linear forwards;
@@ -1876,7 +1892,7 @@ h6 {
     }
 
     nav {
-        height: 65px;
+        height: 75px;
         overflow: hidden;
         transition: all 500ms ease;
 
@@ -2153,7 +2169,7 @@ h6 {
     }
 
     nav {
-        height: 30px;
+        height: 45px;
         overflow: hidden;
 
         .menu-btn {

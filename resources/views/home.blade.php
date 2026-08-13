@@ -3,37 +3,46 @@
 @section('title', 'Eastern Distilleries & Food Industries Limited - Master Distillers')
 
 @section('content')
-<!-- High Contrast Hero Carousel Section -->
-<section class="hero-luxury-brand">
+<!-- Hero Spotlight Carousel Section -->
+<section class="hero-luxury-spotlight">
     <div class="swiper heroSwiper" style="height: 100%;">
         <div class="swiper-wrapper">
-            <!-- Hero Slide 1 -->
-            <div class="swiper-slide hero-slide-brand" style="background-image: url('{{ asset('img/bright_hero_spirit.jpg') }}');">
-                <div class="hero-overlay-brand"></div>
+            <!-- Hero Slide 1: EDFI Hero Spotlight Decanter -->
+            <div class="swiper-slide hero-slide-spotlight" style="background-image: url('{{ asset('img/edfi_hero_spotlight.jpg') }}');">
+                <div class="hero-overlay-spotlight"></div>
                 <div class="container">
                     <div class="hero-content">
-                        <div class="hero-badge-brand"><i class="fa-solid fa-award"></i> EST. 1994 • ONITSHA, NIGERIA</div>
-                        <h1 class="hero-title-brand">Eastern Distilleries <span>& Food Industries</span></h1>
-                        <p class="hero-desc-brand">Renowned manufacturers of premium alcoholic and non-alcoholic beverages. Combining heritage oak aging with state-of-the-art distillation to deliver uncompromised quality.</p>
+                        <div class="hero-badge-pill"><i class="fa-solid fa-award"></i> EST. 1994 • ONITSHA, NIGERIA</div>
+                        <h1 class="hero-title-perfect">Eastern Distilleries <span>& Food Industries</span></h1>
+                        <p class="hero-desc-perfect">Renowned manufacturers of premium alcoholic and non-alcoholic beverages. Combining heritage oak aging with state-of-the-art distillation to deliver uncompromised quality.</p>
                         <div class="hero-buttons">
-                            <a href="#brandShowcase" class="btn-gold">Explore Portfolio <i class="fa-solid fa-arrow-down"></i></a>
-                            <a href="{{ route('about') }}" class="btn-outline-navy" style="background: rgba(255,255,255,0.15); color: #fff; border-color: #fff;">Our Heritage <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="#brandShowcase" class="btn-pill-gold">Explore Portfolio <i class="fa-solid fa-arrow-down"></i></a>
+                            <a href="{{ route('about') }}" class="btn-pill-navy">Our Heritage <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="hero-metrics">
+                            <div class="hero-metric-item"><i class="fa-solid fa-shield-halved"></i> 30+ Years Craftsmanship</div>
+                            <div class="hero-metric-item"><i class="fa-solid fa-whiskey-glass"></i> 20+ Master Brands</div>
+                            <div class="hero-metric-item"><i class="fa-solid fa-award"></i> 100% Quality & Integrity</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Hero Slide 2 -->
-            <div class="swiper-slide hero-slide-brand" style="background-image: url('{{ asset('img/bright_distillery_facility.jpg') }}');">
-                <div class="hero-overlay-brand"></div>
+            <!-- Hero Slide 2: Modern Distillery Facility -->
+            <div class="swiper-slide hero-slide-spotlight" style="background-image: url('{{ asset('img/bright_distillery_facility.jpg') }}');">
+                <div class="hero-overlay-spotlight"></div>
                 <div class="container">
                     <div class="hero-content">
-                        <div class="hero-badge-brand"><i class="fa-solid fa-gem"></i> THE STANDARD OF INTEGRITY</div>
-                        <h1 class="hero-title-brand">Crafted With <span>Passionate Integrity</span></h1>
-                        <p class="hero-desc-brand">Integrity is the bedrock of our operations. From raw agricultural neutral spirits to fine botanicals, we craft taste profiles that define moments of celebration.</p>
+                        <div class="hero-badge-pill"><i class="fa-solid fa-gem"></i> THE STANDARD OF INTEGRITY</div>
+                        <h1 class="hero-title-perfect">Crafted With <span>Passionate Integrity</span></h1>
+                        <p class="hero-desc-perfect">Integrity is the bedrock of our operations. From raw agricultural neutral spirits to fine botanicals, we craft taste profiles that define moments of celebration.</p>
                         <div class="hero-buttons">
-                            <a href="#brandShowcase" class="btn-gold">View Premium Line <i class="fa-solid fa-wine-glass"></i></a>
-                            <a href="{{ route('contact') }}" class="btn-outline-navy" style="background: rgba(255,255,255,0.15); color: #fff; border-color: #fff;">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#brandShowcase" class="btn-pill-gold">View Premium Line <i class="fa-solid fa-wine-glass"></i></a>
+                            <a href="{{ route('contact') }}" class="btn-pill-navy">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="hero-metrics">
+                            <div class="hero-metric-item"><i class="fa-solid fa-industry"></i> Modern Bottling Plant</div>
+                            <div class="hero-metric-item"><i class="fa-solid fa-truck-fast"></i> 36 States Distribution</div>
                         </div>
                     </div>
                 </div>
@@ -43,40 +52,44 @@
     </div>
 </section>
 
-<!-- Deep Navy Stats Banner -->
-<section class="stats-section-brand">
+<!-- Modern White Stats Counter Section -->
+<section class="stats-section-perfect">
     <div class="container">
         <div class="stats-grid">
-            <div class="stat-item-brand">
-                <div class="stat-number-brand">30+</div>
-                <div class="stat-label-brand">Years of Craftsmanship</div>
+            <div class="stat-card-white">
+                <div class="stat-icon-wrap"><i class="fa-solid fa-timeline"></i></div>
+                <div class="stat-number-bold">30+</div>
+                <div class="stat-label-muted">Years Craftsmanship</div>
             </div>
-            <div class="stat-item-brand">
-                <div class="stat-number-brand">20+</div>
-                <div class="stat-label-brand">Master Beverage Brands</div>
+            <div class="stat-card-white">
+                <div class="stat-icon-wrap"><i class="fa-solid fa-whiskey-glass"></i></div>
+                <div class="stat-number-bold">20+</div>
+                <div class="stat-label-muted">Master Brands</div>
             </div>
-            <div class="stat-item-brand">
-                <div class="stat-number-brand">100%</div>
-                <div class="stat-label-brand">Quality & Integrity</div>
+            <div class="stat-card-white">
+                <div class="stat-icon-wrap"><i class="fa-solid fa-award"></i></div>
+                <div class="stat-number-bold">100%</div>
+                <div class="stat-label-muted">Quality & Integrity</div>
             </div>
-            <div class="stat-item-brand">
-                <div class="stat-number-brand">36</div>
-                <div class="stat-label-brand">States Distribution</div>
+            <div class="stat-card-white">
+                <div class="stat-icon-wrap"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="stat-number-bold">36</div>
+                <div class="stat-label-muted">States Distribution</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Corporate Intro Section -->
+<!-- Corporate Heritage Section -->
 <section style="padding: 100px 0; background: #ffffff;">
     <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
         <div style="position: relative;">
-            <div style="border-radius: 16px; overflow: hidden; border: 2px solid var(--brand-gold); box-shadow: var(--shadow-hover);">
-                <img src="{{ asset('img/bright_distillery_facility.jpg') }}" alt="EDFI Distillery Plant" style="width: 100%; height: 420px; object-fit: cover;">
+            <div style="border-radius: 20px; overflow: hidden; border: 2px solid var(--border-gold); box-shadow: var(--shadow-hover);">
+                <img src="{{ asset('img/bright_distillery_facility.jpg') }}" alt="EDFI Distillery Plant" style="width: 100%; height: 430px; object-fit: cover;">
             </div>
-            <div style="position: absolute; bottom: -25px; right: -25px; background: #ffffff; border: 2px solid var(--brand-navy); padding: 25px; border-radius: 12px; box-shadow: var(--shadow-hover); text-align: center;">
-                <img src="{{ asset('img/EDFI LOGO.png') }}" style="height: 48px; margin: 0 auto 10px;">
-                <span style="color: var(--brand-gold); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Krisoral Subsidiary</span>
+            <div style="position: absolute; bottom: -25px; right: -25px; background: #ffffff; border: 2px solid var(--brand-navy); padding: 25px 30px; border-radius: 16px; box-shadow: var(--shadow-hover); text-align: center;">
+                <img src="{{ asset('img/EDFI LOGO.png') }}" style="height: 50px; margin: 0 auto 10px;">
+                <span style="color: var(--brand-gold); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px;">Krisoral Subsidiary</span>
             </div>
         </div>
 
@@ -86,7 +99,7 @@
             <p style="color: var(--text-body); font-size: 1.05rem; line-height: 1.8; margin-bottom: 25px;">
                 Eastern Distilleries and Food Industries Limited (EDFI) is a leading force in Nigeria's food and beverage manufacturing sector. Established in 1994 as a premier subsidiary of Krisoral Group of Companies, EDFI delivers finest quality spirits, aromatic schnapps, dark rums, and premium non-alcoholic beverages.
             </p>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 35px;">
                 <div style="display: flex; align-items: flex-start; gap: 12px;">
                     <i class="fa-solid fa-circle-check" style="color: var(--brand-gold); font-size: 1.3rem; margin-top: 3px;"></i>
                     <div>
@@ -102,13 +115,13 @@
                     </div>
                 </div>
             </div>
-            <a href="{{ route('about') }}" class="btn-navy">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="{{ route('about') }}" class="btn-navy-solid">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
 
 <!-- Filterable Brand Showcase Section -->
-<section id="brandShowcase" style="padding: 90px 0; background: var(--bg-alt);">
+<section id="brandShowcase" style="padding: 95px 0; background: var(--bg-light);">
     <div class="container">
         <div class="section-title-wrap">
             <span class="subtitle">OUR PORTFOLIO</span>
@@ -117,9 +130,9 @@
 
         <!-- Filter Tabs -->
         <div class="filter-tabs">
-            <button class="tab-btn-brand active" onclick="filterBrands('all', this)">All Brands</button>
-            <button class="tab-btn-brand" onclick="filterBrands('premium', this)">Premium Series</button>
-            <button class="tab-btn-brand" onclick="filterBrands('calidon', this)">Calidon Line</button>
+            <button class="tab-btn-pill active" onclick="filterBrands('all', this)">All Brands</button>
+            <button class="tab-btn-pill" onclick="filterBrands('premium', this)">Premium Series</button>
+            <button class="tab-btn-pill" onclick="filterBrands('calidon', this)">Calidon Line</button>
         </div>
 
         <!-- Brands Grid -->
@@ -127,14 +140,14 @@
             <!-- Premium Brands -->
             @foreach($premiumBrands as $pb)
                 <div class="brand-card-item premium-item">
-                    <div class="brand-card">
+                    <div class="brand-card-perfect">
                         <div class="card-img-wrap">
-                            <span class="brand-badge-pill">PREMIUM</span>
+                            <span class="card-badge-ribbon">PREMIUM</span>
                             <img src="{{ asset('uploads/' . $pb->image) }}" alt="{{ $pb->name }}" onerror="this.src='{{ asset('img/logo.png') }}'">
                         </div>
-                        <h3 class="card-title-navy">{{ $pb->name }}</h3>
-                        <p class="card-desc-muted">{{ Str::limit($pb->description, 100) }}</p>
-                        <a href="{{ route('brands.premium.detail', $pb->id) }}" class="card-link-gold">Discover Product <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="card-title-perfect">{{ $pb->name }}</h3>
+                        <p class="card-desc-perfect">{{ Str::limit($pb->description, 100) }}</p>
+                        <a href="{{ route('brands.premium.detail', $pb->id) }}" class="card-link-arrow">Discover Product <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             @endforeach
@@ -142,14 +155,14 @@
             <!-- Calidon Brands -->
             @foreach($calidonBrands as $cb)
                 <div class="brand-card-item calidon-item">
-                    <div class="brand-card">
+                    <div class="brand-card-perfect">
                         <div class="card-img-wrap">
-                            <span class="brand-badge-pill" style="background: var(--brand-gold); color: #fff;">{{ $cb->category ?: 'CALIDON' }}</span>
+                            <span class="card-badge-ribbon" style="background: var(--brand-gold); color: #fff;">{{ $cb->category ?: 'CALIDON' }}</span>
                             <img src="{{ asset('uploads/' . ($cb->fimage ?: $cb->simage)) }}" alt="{{ $cb->name }}" onerror="this.src='{{ asset('img/logo.png') }}'">
                         </div>
-                        <h3 class="card-title-navy">{{ $cb->name }}</h3>
-                        <p class="card-desc-muted">{{ Str::limit($cb->description, 95) }}</p>
-                        <a href="{{ route('brands.calidon.detail', $cb->id) }}" class="card-link-gold">View Specification <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="card-title-perfect">{{ $cb->name }}</h3>
+                        <p class="card-desc-perfect">{{ Str::limit($cb->description, 95) }}</p>
+                        <a href="{{ route('brands.calidon.detail', $cb->id) }}" class="card-link-arrow">View Specification <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             @endforeach
@@ -168,11 +181,11 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
             @foreach($events as $event)
-                <div class="brand-card" style="padding: 0; overflow: hidden;">
+                <div class="brand-card-perfect" style="padding: 0; overflow: hidden;">
                     @if($event->image)
                         <div style="height: 220px; overflow: hidden; position: relative;">
                             <img src="{{ asset('uploads/' . $event->image) }}" alt="{{ $event->title }}" style="width: 100%; height: 100%; object-fit: cover;">
-                            <div style="position: absolute; bottom: 15px; left: 15px; background: var(--brand-navy); padding: 5px 14px; border-radius: 50px; border: 1px solid var(--brand-gold); color: var(--brand-gold); font-size: 0.8rem; font-weight: 800;">
+                            <div style="position: absolute; bottom: 15px; left: 15px; background: var(--brand-navy); padding: 5px 16px; border-radius: 50px; border: 1px solid var(--brand-gold); color: var(--brand-gold); font-size: 0.8rem; font-weight: 800;">
                                 <i class="fa-regular fa-calendar"></i> {{ $event->date ? $event->date->format('M d, Y') : '' }}
                             </div>
                         </div>
@@ -180,7 +193,7 @@
                     <div style="padding: 28px; flex: 1; display: flex; flex-direction: column;">
                         <h3 style="font-family: var(--font-heading); color: var(--brand-navy); font-size: 1.35rem; margin-bottom: 12px;">{{ $event->title }}</h3>
                         <p style="color: var(--text-body); font-size: 0.93rem; line-height: 1.6; margin-bottom: 22px; flex: 1;">{{ Str::limit($event->writeup, 120) }}</p>
-                        <a href="{{ route('events.show', $event->id) }}" class="card-link-gold">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="{{ route('events.show', $event->id) }}" class="card-link-arrow">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             @endforeach
@@ -190,14 +203,14 @@
 @endif
 
 <!-- Call To Action Banner -->
-<section style="padding: 85px 0; background: linear-gradient(rgba(4, 4, 82, 0.93), rgba(4, 4, 82, 0.93)), url('{{ asset('img/bright_hero_spirit.jpg') }}') center/cover attachment; text-align: center; border-y: 3px solid var(--brand-gold);">
+<section style="padding: 90px 0; background: linear-gradient(rgba(4, 4, 82, 0.92), rgba(4, 4, 82, 0.92)), url('{{ asset('img/edfi_hero_spotlight.jpg') }}') center/cover attachment; text-align: center; border-y: 3px solid var(--brand-gold);">
     <div class="container" style="max-width: 800px;">
         <span class="subtitle" style="color: var(--brand-gold);">DIRECT DISTRIBUTION & PARTNERSHIPS</span>
-        <h2 style="font-family: var(--font-heading); font-size: 2.8rem; color: #ffffff; margin-bottom: 20px;">Partner With Eastern Distilleries</h2>
-        <p style="color: #e2e8f0; font-size: 1.1rem; line-height: 1.7; margin-bottom: 35px;">
+        <h2 style="font-family: var(--font-heading); font-size: 3rem; color: #ffffff; margin-bottom: 20px;">Partner With Eastern Distilleries</h2>
+        <p style="color: #e2e8f0; font-size: 1.12rem; line-height: 1.7; margin-bottom: 35px;">
             Whether you are interested in wholesale distribution, corporate events, or custom beverage inquiries, our sales and customer support teams are ready 24/7.
         </p>
-        <a href="{{ route('contact') }}" class="btn-gold">Get In Touch Now <i class="fa-solid fa-paper-plane"></i></a>
+        <a href="{{ route('contact') }}" class="btn-pill-gold">Get In Touch Now <i class="fa-solid fa-paper-plane"></i></a>
     </div>
 </section>
 @endsection
@@ -218,7 +231,7 @@
     });
 
     function filterBrands(category, btnElement) {
-        const buttons = document.querySelectorAll('.tab-btn-brand');
+        const buttons = document.querySelectorAll('.tab-btn-pill');
         buttons.forEach(btn => btn.classList.remove('active'));
         btnElement.classList.add('active');
 

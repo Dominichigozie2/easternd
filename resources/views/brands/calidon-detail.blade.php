@@ -18,10 +18,10 @@
 
 <section style="padding: 80px 0; background: var(--bg-light);">
     <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; background: #ffffff; padding: 50px; border-radius: 16px; border: 2px solid var(--brand-gold); box-shadow: var(--shadow-hover); margin-bottom: 60px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; background: #ffffff; padding: 50px; border-radius: 20px; border: 2px solid var(--brand-gold); box-shadow: var(--shadow-hover); margin-bottom: 60px;">
             <div>
                 <!-- Image Slider -->
-                <div class="swiper calidonSwiper" style="border-radius: 12px; overflow: hidden; border: 1px solid var(--border-light); background: #f8fafc; padding: 30px;">
+                <div class="swiper calidonSwiper" style="border-radius: 14px; overflow: hidden; border: 1px solid var(--border-light); background: #f8fafc; padding: 30px;">
                     <div class="swiper-wrapper">
                         @foreach(['fimage', 'simage', 'timage', 'ftimage'] as $imgKey)
                             @if(!empty($brand->$imgKey))
@@ -41,10 +41,10 @@
                 <h1 style="font-family: var(--font-heading); font-size: 2.8rem; color: var(--brand-navy); margin-bottom: 15px;">{{ $brand->name }}</h1>
                 
                 <div style="display: flex; gap: 15px; margin-bottom: 20px;">
-                    <span style="padding: 5px 16px; background: var(--brand-navy); color: var(--brand-gold); border: 1px solid var(--brand-gold); font-size: 0.85rem; font-weight: 800; border-radius: 50px;">
+                    <span style="padding: 6px 18px; background: var(--brand-navy); color: var(--brand-gold); border: 1px solid var(--brand-gold); font-size: 0.85rem; font-weight: 800; border-radius: 50px;">
                         Category: {{ $brand->category }}
                     </span>
-                    <span style="padding: 5px 16px; background: rgba(76, 175, 80, 0.12); border: 1px solid #4caf50; color: #2e7d32; font-size: 0.85rem; font-weight: 800; border-radius: 50px;">
+                    <span style="padding: 6px 18px; background: rgba(76, 175, 80, 0.12); border: 1px solid #4caf50; color: #2e7d32; font-size: 0.85rem; font-weight: 800; border-radius: 50px;">
                         In Stock
                     </span>
                 </div>
@@ -53,12 +53,12 @@
                     {!! nl2br(e($brand->description)) !!}
                 </p>
 
-                <a href="{{ route('contact') }}" class="btn-gold">Place Wholesale Order <i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="{{ route('contact') }}" class="btn-pill-gold">Place Wholesale Order <i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
 
         <!-- Packaging & Sizes Specification Table -->
-        <div style="background: #ffffff; padding: 40px; border-radius: 16px; border: 1px solid var(--border-light); box-shadow: var(--shadow-soft); margin-bottom: 70px;">
+        <div style="background: #ffffff; padding: 40px; border-radius: 20px; border: 1px solid var(--border-light); box-shadow: var(--shadow-soft); margin-bottom: 70px;">
             <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--brand-navy); margin-bottom: 20px;"><i class="fa-solid fa-boxes-packing" style="color: var(--brand-gold);"></i> Packaging Specifications</h3>
             
             <table class="spec-table">
@@ -107,12 +107,12 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px;">
                 @foreach($otherBrands as $other)
-                    <div class="brand-card" style="text-align: center;">
+                    <div class="brand-card-perfect" style="text-align: center;">
                         <div class="card-img-wrap">
                             <img src="{{ asset('uploads/' . ($other->fimage ?: $other->simage)) }}" alt="{{ $other->name }}" onerror="this.src='{{ asset('img/logo.png') }}'">
                         </div>
-                        <h3 class="card-title-navy" style="font-size: 1.25rem;">{{ $other->name }}</h3>
-                        <a href="{{ route('brands.calidon.detail', $other->id) }}" class="card-link-gold" style="justify-content: center; margin-top: 10px;">View Product <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3 class="card-title-perfect" style="font-size: 1.25rem;">{{ $other->name }}</h3>
+                        <a href="{{ route('brands.calidon.detail', $other->id) }}" class="card-link-arrow" style="justify-content: center; margin-top: 10px;">View Product <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 @endforeach
             </div>

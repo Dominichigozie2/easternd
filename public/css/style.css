@@ -2,20 +2,21 @@
 
 :root {
     --brand-navy: #040452;
-    --brand-navy-light: #0a0a73;
     --brand-navy-dark: #020233;
+    --brand-navy-light: #0d1275;
     
     --brand-gold: #ad8231;
     --brand-gold-hover: #c4953c;
     --brand-gold-light: #f5e4be;
-    --gold-glow: rgba(173, 130, 49, 0.25);
+    --gold-glow: rgba(173, 130, 49, 0.35);
     
-    --bg-light: #f8fafc;
+    --bg-light: #f9f8f6;
     --bg-surface: #ffffff;
-    --bg-alt: #f1f5f9;
+    --bg-card: #ffffff;
+    --bg-soft-blue: #f1f4f9;
     
     --border-light: #e2e8f0;
-    --border-gold: rgba(173, 130, 49, 0.35);
+    --border-gold: rgba(173, 130, 49, 0.4);
     
     --text-heading: #040452;
     --text-body: #334155;
@@ -25,10 +26,10 @@
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
     
-    --shadow-soft: 0 10px 30px rgba(4, 4, 82, 0.06);
-    --shadow-hover: 0 20px 40px rgba(4, 4, 82, 0.12);
+    --shadow-soft: 0 12px 30px rgba(4, 4, 82, 0.06);
+    --shadow-hover: 0 20px 45px rgba(4, 4, 82, 0.14);
     
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset & Base */
@@ -97,6 +98,7 @@ img {
     display: flex;
     align-items: center;
     gap: 8px;
+    font-weight: 500;
 }
 
 .contact-nav a i {
@@ -130,15 +132,15 @@ img {
     transform: translateY(-2px);
 }
 
-/* Sticky Header Navigation */
+/* Modern Sticky Floating Header Navigation */
 nav {
     position: sticky;
     top: 0;
     z-index: 1000;
     background: #ffffff;
     border-bottom: 1px solid var(--border-light);
-    padding: 15px 0;
-    box-shadow: 0 4px 20px rgba(4, 4, 82, 0.05);
+    padding: 14px 0;
+    box-shadow: 0 4px 25px rgba(4, 4, 82, 0.08);
     transition: var(--transition);
 }
 
@@ -149,7 +151,7 @@ nav {
 }
 
 .logo img {
-    height: 54px;
+    height: 56px;
     object-fit: contain;
 }
 
@@ -160,7 +162,7 @@ nav {
 }
 
 .list-items a {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--brand-navy);
     text-transform: uppercase;
@@ -177,6 +179,7 @@ nav {
     width: 0;
     height: 3px;
     background: var(--brand-gold);
+    border-radius: 2px;
     transition: var(--transition);
 }
 
@@ -203,12 +206,12 @@ nav {
     transform: translateX(-50%) translateY(15px);
     background: #ffffff;
     border: 2px solid var(--brand-gold);
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 25px;
     display: none;
     gap: 40px;
-    min-width: 500px;
-    box-shadow: 0 20px 40px rgba(4, 4, 82, 0.15);
+    min-width: 520px;
+    box-shadow: 0 20px 45px rgba(4, 4, 82, 0.18);
     opacity: 0;
     transition: var(--transition);
 }
@@ -255,88 +258,91 @@ nav {
     cursor: pointer;
 }
 
-/* Buttons */
-.btn-gold {
+/* Modern Pill Buttons */
+.btn-pill-gold {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 14px 34px;
+    gap: 12px;
+    padding: 15px 36px;
     background: linear-gradient(135deg, #ad8231 0%, #8a6522 100%);
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 6px;
-    box-shadow: 0 4px 15px var(--gold-glow);
+    border-radius: 50px;
+    box-shadow: 0 8px 25px var(--gold-glow);
     border: none;
     cursor: pointer;
     transition: var(--transition);
 }
 
-.btn-gold:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(173, 130, 49, 0.4);
+.btn-pill-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(173, 130, 49, 0.45);
     background: linear-gradient(135deg, #c4953c 0%, #ad8231 100%);
     color: #ffffff;
 }
 
-.btn-navy {
+.btn-pill-navy {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 14px 34px;
-    background: var(--brand-navy);
+    gap: 12px;
+    padding: 15px 36px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
     color: #ffffff;
     font-weight: 700;
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 6px;
-    box-shadow: 0 4px 15px rgba(4, 4, 82, 0.2);
-    border: 2px solid var(--brand-navy);
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
     cursor: pointer;
     transition: var(--transition);
 }
 
-.btn-navy:hover {
-    background: var(--brand-navy-light);
-    border-color: var(--brand-navy-light);
-    transform: translateY(-2px);
-    color: #ffffff;
-}
-
-.btn-outline-navy {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 34px;
+.btn-pill-navy:hover {
     background: #ffffff;
     color: var(--brand-navy);
-    font-weight: 700;
+    border-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.btn-navy-solid {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 36px;
+    background: var(--brand-navy);
+    color: #ffffff;
+    font-weight: 800;
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 6px;
-    border: 2px solid var(--brand-navy);
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 8px 25px rgba(4, 4, 82, 0.25);
     cursor: pointer;
     transition: var(--transition);
 }
 
-.btn-outline-navy:hover {
-    background: var(--brand-navy);
+.btn-navy-solid:hover {
+    background: var(--brand-navy-light);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(4, 4, 82, 0.35);
     color: #ffffff;
 }
 
-/* High Contrast Hero Section Fix */
-.hero-luxury-brand {
+/* Perfect Eye-Appealing Hero Section */
+.hero-luxury-spotlight {
     position: relative;
     height: calc(100vh - 120px);
-    min-height: 620px;
+    min-height: 640px;
     overflow: hidden;
 }
 
-.hero-slide-brand {
+.hero-slide-spotlight {
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -345,25 +351,25 @@ nav {
     align-items: center;
 }
 
-/* Deep Navy Contrast Gradient Overlay so white and gold text pops perfectly! */
-.hero-overlay-brand {
+/* Natural Radial Lighting Overlay - Preserves rich image detail on right while providing crisp contrast on left */
+.hero-overlay-spotlight {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(4, 4, 82, 0.94) 0%, rgba(4, 4, 82, 0.82) 50%, rgba(4, 4, 82, 0.35) 100%);
+    background: radial-gradient(ellipse at left center, rgba(4, 4, 82, 0.92) 0%, rgba(4, 4, 82, 0.7) 50%, rgba(4, 4, 82, 0.2) 100%);
 }
 
 .hero-content {
     position: relative;
     z-index: 10;
-    max-width: 760px;
+    max-width: 720px;
 }
 
-.hero-badge-brand {
+.hero-badge-pill {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 18px;
-    background: rgba(173, 130, 49, 0.2);
+    gap: 10px;
+    padding: 7px 22px;
+    background: rgba(173, 130, 49, 0.25);
     border: 1px solid var(--brand-gold);
     border-radius: 50px;
     color: #f5e4be;
@@ -372,40 +378,65 @@ nav {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 22px;
+    backdrop-filter: blur(8px);
 }
 
-.hero-title-brand {
+.hero-title-perfect {
     font-family: var(--font-heading);
-    font-size: 3.6rem;
-    line-height: 1.15;
+    font-size: 3.8rem;
+    line-height: 1.12;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
-.hero-title-brand span {
+.hero-title-perfect span {
     color: var(--brand-gold);
     font-style: italic;
 }
 
-.hero-desc-brand {
-    font-size: 1.12rem;
+.hero-desc-perfect {
+    font-size: 1.15rem;
     color: #e2e8f0;
     line-height: 1.7;
     margin-bottom: 35px;
+    font-weight: 400;
 }
 
 .hero-buttons {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Quick Metrics Row in Hero */
+.hero-metrics {
+    display: flex;
+    gap: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 25px;
+}
+
+.hero-metric-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.hero-metric-item i {
+    color: var(--brand-gold);
+    font-size: 1.1rem;
 }
 
 /* Sections & Titles */
 .section-title-wrap {
     text-align: center;
     max-width: 650px;
-    margin: 0 auto 50px;
+    margin: 0 auto 55px;
 }
 
 .subtitle {
@@ -413,23 +444,23 @@ nav {
     font-size: 0.88rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     margin-bottom: 10px;
     display: block;
 }
 
 .section-title-navy {
     font-family: var(--font-heading);
-    font-size: 2.6rem;
+    font-size: 2.7rem;
     color: var(--brand-navy);
     font-weight: 700;
 }
 
-/* Cards & Grids */
-.brand-card {
+/* Perfect Cards & Grids */
+.brand-card-perfect {
     background: #ffffff;
     border: 1px solid var(--border-light);
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 28px;
     box-shadow: var(--shadow-soft);
     transition: var(--transition);
@@ -438,9 +469,9 @@ nav {
     flex-direction: column;
 }
 
-.brand-card:hover {
+.brand-card-perfect:hover {
     border-color: var(--brand-gold);
-    transform: translateY(-6px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -453,7 +484,7 @@ nav {
     position: relative;
     overflow: hidden;
     background: #f8fafc;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 15px;
 }
 
@@ -464,15 +495,15 @@ nav {
     transition: var(--transition);
 }
 
-.brand-card:hover .card-img-wrap img {
+.brand-card-perfect:hover .card-img-wrap img {
     transform: scale(1.08);
 }
 
-.brand-badge-pill {
+.card-badge-ribbon {
     position: absolute;
     top: 12px;
     right: 12px;
-    padding: 4px 12px;
+    padding: 5px 14px;
     background: var(--brand-navy);
     border: 1px solid var(--brand-gold);
     border-radius: 50px;
@@ -481,14 +512,14 @@ nav {
     font-weight: 800;
 }
 
-.card-title-navy {
+.card-title-perfect {
     font-family: var(--font-heading);
     font-size: 1.45rem;
     color: var(--brand-navy);
     margin-bottom: 12px;
 }
 
-.card-desc-muted {
+.card-desc-perfect {
     color: var(--text-body);
     font-size: 0.93rem;
     line-height: 1.6;
@@ -496,7 +527,7 @@ nav {
     flex: 1;
 }
 
-.card-link-gold {
+.card-link-arrow {
     color: var(--brand-gold);
     font-weight: 800;
     font-size: 0.92rem;
@@ -505,7 +536,7 @@ nav {
     gap: 8px;
 }
 
-.card-link-gold:hover {
+.card-link-arrow:hover {
     color: var(--brand-navy);
     gap: 12px;
 }
@@ -519,32 +550,31 @@ nav {
     flex-wrap: wrap;
 }
 
-.tab-btn-brand {
-    padding: 11px 26px;
+.tab-btn-pill {
+    padding: 12px 28px;
     background: #ffffff;
     border: 2px solid var(--border-light);
     border-radius: 50px;
     color: var(--brand-navy);
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     transition: var(--transition);
 }
 
-.tab-btn-brand.active, .tab-btn-brand:hover {
+.tab-btn-pill.active, .tab-btn-pill:hover {
     background: var(--brand-navy);
     color: var(--brand-gold);
     border-color: var(--brand-gold);
     box-shadow: var(--shadow-soft);
 }
 
-/* Stats Counter Section */
-.stats-section-brand {
-    background: var(--brand-navy);
-    color: #ffffff;
-    padding: 70px 0;
-    border-y: 2px solid var(--brand-gold);
+/* Stats Section */
+.stats-section-perfect {
+    background: var(--bg-soft-blue);
+    padding: 80px 0;
+    border-y: 1px solid var(--border-light);
 }
 
 .stats-grid {
@@ -553,25 +583,46 @@ nav {
     gap: 30px;
 }
 
-.stat-item-brand {
+.stat-card-white {
     text-align: center;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-gold);
-    border-radius: 12px;
+    padding: 30px 20px;
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
 }
 
-.stat-number-brand {
-    font-family: var(--font-heading);
-    font-size: 3.2rem;
-    font-weight: 800;
+.stat-card-white:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-gold);
+}
+
+.stat-icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(173, 130, 49, 0.12);
+    border: 1px solid var(--brand-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--brand-gold);
-    margin-bottom: 5px;
+    font-size: 1.4rem;
+    margin: 0 auto 16px;
 }
 
-.stat-label-brand {
-    color: #e2e8f0;
-    font-size: 0.95rem;
+.stat-number-bold {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--brand-navy);
+    margin-bottom: 6px;
+}
+
+.stat-label-muted {
+    color: var(--text-body);
+    font-size: 0.92rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -579,15 +630,15 @@ nav {
 
 /* Page Hero */
 .page-hero {
-    background: linear-gradient(rgba(4, 4, 82, 0.9), rgba(4, 4, 82, 0.9)), url('../img/bright_hero_spirit.jpg') center/cover;
-    padding: 90px 0 50px;
+    background: linear-gradient(rgba(4, 4, 82, 0.88), rgba(4, 4, 82, 0.88)), url('../img/edfi_hero_spotlight.jpg') center/cover;
+    padding: 95px 0 55px;
     text-align: center;
     border-bottom: 3px solid var(--brand-gold);
 }
 
 .page-hero h3 {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: #ffffff;
     margin-bottom: 12px;
 }
@@ -612,12 +663,12 @@ nav {
     border-collapse: collapse;
     margin-top: 20px;
     background: #ffffff;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
 }
 
 .spec-table th, .spec-table td {
-    padding: 16px 20px;
+    padding: 16px 22px;
     border-bottom: 1px solid var(--border-light);
     text-align: left;
     font-size: 0.95rem;
@@ -639,7 +690,7 @@ nav {
 .footer {
     background: var(--brand-navy-dark);
     color: #e2e8f0;
-    padding: 70px 0 30px;
+    padding: 75px 0 35px;
     border-top: 3px solid var(--brand-gold);
 }
 
@@ -651,7 +702,7 @@ nav {
 }
 
 .footer-logo img {
-    height: 54px;
+    height: 56px;
     margin-bottom: 16px;
 }
 
@@ -702,8 +753,8 @@ nav {
     .menu-btn {
         display: block;
     }
-    .hero-title-brand {
-        font-size: 2.6rem;
+    .hero-title-perfect {
+        font-size: 2.7rem;
     }
     .footer-container {
         grid-template-columns: 1fr 1fr;
@@ -711,8 +762,8 @@ nav {
 }
 
 @media (max-width: 600px) {
-    .hero-title-brand {
-        font-size: 2.1rem;
+    .hero-title-perfect {
+        font-size: 2.2rem;
     }
     .footer-container {
         grid-template-columns: 1fr;
